@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Dashboard from '../../components/Dashboard/Dashboard'
-import './home.scss'
+import Paper from '../../components/Paper/Paper'
 
 const Home = () => {
    return (
       <Dashboard>
-         <div className='home'>Bill is a cat.</div>
+         <Paper>Bill is a cat.</Paper>
       </Dashboard>
    )
 }

@@ -5493,20 +5493,20 @@ a.ant-btn-sm {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   font-variant: tabular-nums;
   line-height: 1.5;
   list-style: none;
   -webkit-font-feature-settings: 'tnum';
           font-feature-settings: 'tnum';
-  color: rgba(0, 0, 0, 0.45);
+  color: var(--thirdText);
   font-size: 14px;
 }
 .ant-breadcrumb .anticon {
   font-size: 14px;
 }
 .ant-breadcrumb a {
-  color: rgba(0, 0, 0, 0.45);
+  color: var(--thirdText);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -5514,17 +5514,17 @@ a.ant-btn-sm {
   color: #40a9ff;
 }
 .ant-breadcrumb > span:last-child {
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
 }
 .ant-breadcrumb > span:last-child a {
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
 }
 .ant-breadcrumb > span:last-child .ant-breadcrumb-separator {
   display: none;
 }
 .ant-breadcrumb-separator {
   margin: 0 8px;
-  color: rgba(0, 0, 0, 0.45);
+  color: var(--thirdText);
 }
 .ant-breadcrumb-link > .anticon + span {
   margin-left: 4px;

@@ -3,12 +3,12 @@ import React from 'react'
 import Dashboard from '../../components/Dashboard/Dashboard'
 import Paper from '../../components/Paper/Paper'
 
-const Users = () => {
+const Elis = () => {
    return (
       <Dashboard>
-         <Paper>Iam users</Paper>
+         <Paper>Iam Elisss</Paper>
       </Dashboard>
    )
 }
 
-export default Users
+export default Elis

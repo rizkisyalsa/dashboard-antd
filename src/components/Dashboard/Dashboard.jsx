@@ -1,18 +1,17 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { Layout, Divider } from 'antd';
 
 import AuthContext from '../../context/auth/authContext'
 
 import Topbar from './Topbar/Topbar'
+import Breadcrumb from './Breadcrumb/Breadcrumb'
 import Sidebar from './Sidebar/Sidebar'
 import Bottombar from './Bottombar/Bottombar'
 
 const Dashboard = ({ children }) => {
 
    const authContext = useContext(AuthContext)
-   const { theme, setTheme, subMenu, setSubMenu} = authContext
-   
-   const [collapsed, setCollapsed] = useState(false)
+   const { theme, setTheme, subMenu, setSubMenu, collapsed, setCollapsed } = authContext
 
    const onTheme = () => {
       const themeAll = theme === "light" ? "dark" : "light";
@@ -23,7 +22,7 @@ const Dashboard = ({ children }) => {
          document.documentElement.classList.remove("color-theme-in-transition");
       }, 1000);
    }
-   const onCollapsed = () => setCollapsed(!collapsed)
+
    const { Content } = Layout
 
    return (
@@ -38,8 +37,11 @@ const Dashboard = ({ children }) => {
          <Layout style={{ backgroundColor: 'var(--secondaryBg)' }}>
             <Topbar
                collapsed={collapsed}
-               onCollapsed={onCollapsed} />
-            <Content style={{ margin: '3rem' }}>
+               setCollapsed={setCollapsed}
+               setSubMenu={setSubMenu}
+            />
+            <Content style={{ margin: '2.4rem' }}>
+               <Breadcrumb />
                {children}
             </Content>
             <Divider style={{ margin: 0, backgroundColor: 'var(--primaryBorder)' }} />

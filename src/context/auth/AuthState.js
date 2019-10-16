@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 
 import {
+   SET_COLLAPSED,
    SET_THEME,
    SET_SUBMENU
 } from '../types'
@@ -9,11 +10,16 @@ import authReducer from './authReducer'
 
 const AuthState = props => {
    const initialState = {
+      collapsed: false,
       theme: 'light',
-      subMenu: null
+      subMenu: [],
+      currentSubMenu: []
    }
 
    const [state, dispatch] = useReducer(authReducer, initialState)
+
+   // Set theme
+   const setCollapsed = () => dispatch({ type: SET_COLLAPSED })
 
    // Set theme
    const setTheme = () => dispatch({ type: SET_THEME })
@@ -29,8 +35,10 @@ const AuthState = props => {
    return(
       <AuthContext.Provider
          value={{
+            collapsed: state.collapsed,
             theme: state.theme,
             subMenu: state.subMenu,
+            setCollapsed,
             setTheme,
             setSubMenu
          }}>
