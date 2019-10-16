@@ -1,0 +1,33 @@
+.logo {
+  height: 32px;
+  background: #00000000;
+  margin: 16px;
+}
+
+.sidebar {
+  overflow: auto;
+  position: fixed;
+
+  &__menu {
+    height: 100vh;
+  }
+}
+
+.fixed {
+  width: 20rem;
+}
+
+.switch-theme {
+  width: 20rem;
+  position: fixed;
+  bottom: 1.5rem;
+
+  display: flex;
+  justify-content: space-around;
+
+  & p {
+    font-size: 1.2rem;
+    color: #999999;
+    margin: 0;
+  }
+}

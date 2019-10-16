@@ -1,0 +1,29 @@
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+html {
+  /* global colors */
+  --primaryBg: #fff;
+  --secondaryBg: #F0F2F5;
+  --thirdBg: #fff;
+  --primaryText: rgba(0,0,0,0.85);
+  --secondaryText: rgba(0,0,0,0.65);
+  --thirdText: rgba(0,0,0,0.45);
+  --primaryBorder: #e8e8e8;
+}
+
+html[data-theme="dark"] {
+  /* global colors */
+  --primaryBg: #181C1F;
+  --secondaryBg: #2E2F32;
+  --thirdBg: rgb(22, 22, 22);
+  --primaryText: #FFFFFF;
+  --secondaryText: rgba(255, 255, 255, 0.65);
+  --thirdText: rgba(255, 255, 255, 0.35);
+  --primaryBorder: #4646465b;
+}

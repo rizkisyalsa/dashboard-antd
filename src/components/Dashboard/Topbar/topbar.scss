@@ -1,0 +1,19 @@
+.trigger {
+  font-size: 3rem;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.header {
+  background-color: var(--thirdBg) !important;
+  padding: 0 !important;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
