@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import AuthState from './context/auth/AuthState'
 
-import Home from './views/Home/Home'
+import Dashboard from './views/Dashboard/Dashboard'
 import Users from './views/Users/Users'
 import Elis from './views/Elis/Elis'
 import Rizki from './views/Rizki/Rizki'
@@ -17,7 +17,7 @@ const App = () => {
     <AuthState>
       <Router>
         <Switch>
-          <Route exact path='/home' component={Home} />
+          <Route exact path='/' component={Dashboard} />
           <Route exact path='/users' component={Users} />
           <Route exact path='/elis' component={Elis} />
           <Route exact path='/rizki' component={Rizki} />

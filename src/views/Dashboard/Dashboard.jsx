@@ -3,12 +3,12 @@ import React from 'react'
 import DashboardLayout from '../../components/DashboardLayout/DashboardLayout'
 import Paper from '../../components/Paper/Paper'
 
-const Rizki = () => {
+const Dashboard = () => {
    return (
       <DashboardLayout>
-         <Paper>Iam Rizkiss</Paper>
+         <Paper>Bill is a cat.</Paper>
       </DashboardLayout>
    )
 }
 
-export default Rizki
+export default Dashboard

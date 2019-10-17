@@ -8,7 +8,7 @@ import Breadcrumb from './Breadcrumb/Breadcrumb'
 import Sidebar from './Sidebar/Sidebar'
 import Bottombar from './Bottombar/Bottombar'
 
-const Dashboard = ({ children }) => {
+const DashboardLayout = ({ children }) => {
 
    const authContext = useContext(AuthContext)
    const { theme, setTheme, subMenu, setSubMenu, collapsed, setCollapsed } = authContext
@@ -51,4 +51,4 @@ const Dashboard = ({ children }) => {
    )
 }
 
-export default Dashboard
+export default DashboardLayout

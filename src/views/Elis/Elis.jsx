@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Dashboard from '../../components/Dashboard/Dashboard'
+import DashboardLayout from '../../components/DashboardLayout/DashboardLayout'
 import Paper from '../../components/Paper/Paper'
 
 const Elis = () => {
    return (
-      <Dashboard>
+      <DashboardLayout>
          <Paper>Iam Elisss</Paper>
-      </Dashboard>
+      </DashboardLayout>
    )
 }
 

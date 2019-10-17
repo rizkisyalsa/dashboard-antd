@@ -38,10 +38,10 @@ const Sidebar = ({ collapsed, theme, onTheme, subMenu, setSubMenu, location }) =
             >
                <div className="logo" />
 
-               <Menu.Item key="/home">
-                  <Link to='/home'>
-                     <Icon type="home" />
-                     <span>Home</span>
+               <Menu.Item key="/">
+                  <Link to='/'>
+                     <Icon type="dashboard" />
+                     <span>Dashboard</span>
                   </Link>
                </Menu.Item>
 

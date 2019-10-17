@@ -5,31 +5,31 @@ import { Breadcrumb as BreadcrumbAntd, Icon } from 'antd'
 const Breadcrumb = ({ location }) => {
 
    const list = {
-      home: ['/home', 'home', 'home'],
+      dashboard: ['/', 'dashboard', 'dashboard'],
       users: ['/users', 'desktop', 'users'],
       team: [false, 'team', 'team'],
       rizki: ['/rizki', false, 'rizki'],
       elis: ['/elis', false, 'elis'],
    }
 
-   const { home, users, team, rizki, elis } = list
+   const { dashboard, users, team, rizki, elis } = list
 
    const breadcrumb = [
       {
-         path: '/home',
-         url: [home]
+         path: '/',
+         url: [dashboard]
       },
       {
          path: '/users',
-         url: [home, users]
+         url: [dashboard, users]
       },
       {
          path: '/elis',
-         url: [home, team, elis]
+         url: [dashboard, team, elis]
       },
       {
          path: '/rizki',
-         url: [home, team, rizki]
+         url: [dashboard, team, rizki]
       }
    ]
 
