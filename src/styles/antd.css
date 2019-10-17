@@ -2922,7 +2922,7 @@ html {
 .ant-select-dropdown {
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   font-variant: tabular-nums;
   line-height: 1.5;
   list-style: none;
@@ -2994,7 +2994,7 @@ html {
   display: block;
   padding: 5px 12px;
   overflow: hidden;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   font-weight: normal;
   line-height: 22px;
   white-space: nowrap;
@@ -3013,9 +3013,9 @@ html {
   border-radius: 0 0 4px 4px;
 }
 .ant-select-dropdown-menu-item-selected {
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   font-weight: 600;
-  background-color: #fafafa;
+  background-color: var(--thirdBg);
 }
 .ant-select-dropdown-menu-item-disabled {
   color: rgba(0, 0, 0, 0.25);
@@ -6449,7 +6449,7 @@ a.ant-btn-sm {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 1.5;
@@ -6507,17 +6507,17 @@ a.ant-btn-sm {
   padding: 4px 0;
   text-align: left;
   list-style-type: none;
-  background-color: #fff;
+  background-color: var(--thirdBg);
   background-clip: padding-box;
   border-radius: 4px;
   outline: none;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   -webkit-transform: translate3d(0, 0, 0);
 }
 .ant-dropdown-menu-item-group-title {
   padding: 5px 12px;
-  color: rgba(0, 0, 0, 0.45);
+  color: var(--thirdText);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -6535,7 +6535,7 @@ a.ant-btn-sm {
   clear: both;
   margin: 0;
   padding: 5px 12px;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
@@ -6554,7 +6554,7 @@ a.ant-btn-sm {
   display: block;
   margin: -5px -12px;
   padding: 5px 12px;
-  color: rgba(0, 0, 0, 0.65);
+  color: var(--secondaryText);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -6563,11 +6563,11 @@ a.ant-btn-sm {
 .ant-dropdown-menu-item-selected > a,
 .ant-dropdown-menu-submenu-title-selected > a {
   color: #1890ff;
-  background-color: #e6f7ff;
+  background-color: var(--primaryHover);
 }
 .ant-dropdown-menu-item:hover,
 .ant-dropdown-menu-submenu-title:hover {
-  background-color: #e6f7ff;
+  background-color: var(--primaryHover);
 }
 .ant-dropdown-menu-item-disabled,
 .ant-dropdown-menu-submenu-title-disabled {
@@ -6586,7 +6586,7 @@ a.ant-btn-sm {
   margin: 4px 0;
   overflow: hidden;
   line-height: 0;
-  background-color: #e8e8e8;
+  background-color: var(--primaryBorder);
 }
 .ant-dropdown-menu-item .ant-dropdown-menu-submenu-arrow,
 .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow {

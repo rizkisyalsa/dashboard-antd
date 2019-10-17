@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Layout, Menu, Icon, Switch } from 'antd'
 import { Link, withRouter } from 'react-router-dom';
 
@@ -6,7 +6,23 @@ import './sidebar.scss'
 
 
 const Sidebar = ({ collapsed, theme, onTheme, subMenu, setSubMenu, location }) => {
-   
+
+   useEffect(() => {
+      if (!collapsed) {
+         switch (location.pathname) {
+            case '/rizki':
+            case '/elis':
+               setSubMenu(['team'])
+               break;
+            default:
+               setSubMenu([])
+               break;
+         }
+      }
+      //eslint-disable-next-line
+   }, [collapsed])
+
+
    return (
       <Layout.Sider
          trigger={null} collapsible collapsed={collapsed}
@@ -15,7 +31,7 @@ const Sidebar = ({ collapsed, theme, onTheme, subMenu, setSubMenu, location }) =
          <div className={"sidebar" + (!collapsed ? ' fixed' : '')} >
             <Menu theme={theme}
                openKeys={subMenu}
-               onOpenChange={(openKeys)=> setSubMenu(openKeys)}
+               onOpenChange={(openKeys) => setSubMenu(openKeys)}
                selectedKeys={[location.pathname]}
                mode="inline"
                className="sidebar__menu"
@@ -55,18 +71,15 @@ const Sidebar = ({ collapsed, theme, onTheme, subMenu, setSubMenu, location }) =
             </Menu>
          </div>
 
-         {!collapsed && (
-            <div className='switch-theme'>
-               <p><Icon type="bulb" /> Switch Theme</p>
-               <Switch
-                  checked={theme === 'dark'}
-                  onChange={onTheme}
-                  checkedChildren="Dark"
-                  unCheckedChildren="Light"
-               />
-            </div>
-         )}
-
+         <div className={'switch-theme' + (collapsed ? ' small' : '')}>
+            {!collapsed && <p><Icon type="bulb" /> Switch Theme</p>}
+            <Switch
+               checked={theme === 'dark'}
+               onChange={onTheme}
+               checkedChildren="Dark"
+               unCheckedChildren="Light"
+            />
+         </div>
       </Layout.Sider>
    )
 }

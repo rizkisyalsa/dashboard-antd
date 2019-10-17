@@ -7,12 +7,12 @@ const Breadcrumb = ({ location }) => {
    const list = {
       home: ['/home', 'home', 'home'],
       users: ['/users', 'desktop', 'users'],
-      team: ['','team','team'],
-      rizki: ['/rizki','','rizki'],
-      elis: ['/elis','','elis'],
+      team: [false, 'team', 'team'],
+      rizki: ['/rizki', false, 'rizki'],
+      elis: ['/elis', false, 'elis'],
    }
 
-   const {home, users, team, rizki, elis} = list
+   const { home, users, team, rizki, elis } = list
 
    const breadcrumb = [
       {
@@ -37,12 +37,13 @@ const Breadcrumb = ({ location }) => {
 
    return (
       <BreadcrumbAntd style={{ marginBottom: '2.4rem', color: 'var(--secondaryText)' }}>
-         {breadcrumbNow[0].url.map(e => (
-            <BreadcrumbAntd.Item>
+         {breadcrumbNow[0].url.map((e, i) => (
+            <BreadcrumbAntd.Item key={i}>
                {
-                  e[0] === '' ?
-                     (<span><Icon type={e[1]} /> {e[2]}</span>)
-                     : (<Link to={e[0]}><Icon type={e[1]} /> {e[2]}</Link>)
+                  !e[0] ?
+                     (<span>
+                        {e[1] && <Icon type={e[1]} />} {e[2]}</span>)
+                     : (<Link to={e[0]}>{e[1] && <Icon type={e[1]} />} {e[2]}</Link>)
                }
             </BreadcrumbAntd.Item>
          ))}

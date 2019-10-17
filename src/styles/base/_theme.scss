@@ -10,11 +10,14 @@ html {
   /* global colors */
   --primaryBg: #fff;
   --secondaryBg: #F0F2F5;
-  --thirdBg: #fff;
+  --thirdBg: #fafafa;
   --primaryText: rgba(0,0,0,0.85);
   --secondaryText: rgba(0,0,0,0.65);
   --thirdText: rgba(0,0,0,0.45);
+  --fourthText: rgba(0,0,0,0.25);
+  --fivthText: rgba(0,0,0,0.15);
   --primaryBorder: #e8e8e8;
+  --primaryHover: #e6f7ff;
 }
 
 html[data-theme="dark"] {
@@ -25,5 +28,8 @@ html[data-theme="dark"] {
   --primaryText: #FFFFFF;
   --secondaryText: rgba(255, 255, 255, 0.65);
   --thirdText: rgba(255, 255, 255, 0.45);
+  --fourthText: rgba(255, 255, 255,0.25);
+  --fivthText: rgba(255, 255, 255,0.15);
   --primaryBorder: #4646465b;
+  --primaryHover: #1890ff;
 }
